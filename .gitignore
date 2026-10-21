@@ -1,0 +1,5 @@
+node_modules/
+work/
+playwright-report/
+test-results/
+__pycache__/

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="数据结构前四章 PTA 个人刷题：判断、选择、填空与程序填空。">
+  <title>数据结构 · Midpoint Whisper</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data/questions.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#question">跳至题目</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1><a href="./">数据结构</a></h1>
+      <nav id="main-nav" aria-label="练习模式"></nav>
+      <div class="filters">
+        <label><span class="sr-only">选择章节</span><select id="chapter"></select></label>
+        <label><span class="sr-only">练习顺序</span><select id="order"><option value="sequence">顺序</option><option value="random">随机</option></select></label>
+        <button id="open-navigator" class="button secondary" aria-haspopup="dialog">题号</button>
+      </div>
+    </div>
+  </header>
+  <main class="workspace">
+    <div class="toolbar">
+      <div id="type-tabs" role="group" aria-label="筛选题型"></div>
+      <span id="progress-text"></span>
+    </div>
+    <section aria-label="刷题区">
+      <div id="question" tabindex="-1"></div>
+      <div class="pagination">
+        <button id="previous" class="button secondary" title="上一题（←）">上一题</button>
+        <span id="position"></span>
+        <button id="next" class="button secondary" title="下一题（→）">下一题</button>
+      </div>
+    </section>
+  </main>
+  <dialog id="question-nav" aria-labelledby="navigator-title">
+    <div class="navigator-heading"><h2 id="navigator-title">题号 <span id="nav-count"></span></h2><button id="close-navigator" class="button secondary" aria-label="关闭题号面板">关闭</button></div>
+    <div class="legend"><span><i></i>未答</span><span><i class="correct"></i>正确</span><span><i class="wrong"></i>错误</span></div>
+    <div id="number-grid"></div>
+  </dialog>
+  <span id="save-status" class="save-status sr-only" role="status"></span>
+  <div id="toast" role="status" class="toast" hidden></div>
+  <noscript>请启用 JavaScript 以使用刷题和本地保存功能。</noscript>
+</body>
+</html>
